@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>
+			{{ article.titre }}
+		</title>
+	</head>
+<body>
+
+	<h3>Titre: {{ article.titre }}</h3>
+	<p>
+		<span>Publié le {{ article.date|date('d/m/Y') }} </span>
+		<span>Par {{ article.auteur  }}</span>
+	</p>
+	<p>
+		{{ article.contenu }}
+	</p>
+
+</body>
+</html>

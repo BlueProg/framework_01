@@ -1,0 +1,9 @@
+base_public:
+    path:     /
+    defaults: { _controller: BaseBundle:Public:index }
+
+base_article:
+    path:     /article/{slug}.{_format}
+    defaults: { _controller: BaseBundle:Public:article, _format: html }
+    requirements:
+        _format: rss|html

@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Volumes/Data/nfs/zfs-student-3/users/2013/mmole/mamp/apps/intra/htdocs/app/config/routing_dev.yml

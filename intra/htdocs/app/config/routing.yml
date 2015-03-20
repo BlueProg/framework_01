@@ -1,0 +1,30 @@
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /base/profile
+
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /base/register
+
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /base/resetting
+
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /base/profile
+
+base:
+    resource: "@BaseBundle/Resources/config/routing.yml"
+    prefix:   /base
+
+base.admin:
+    resource: "@BaseBundle/Resources/config/routing_admin.yml"
+    prefix:   /admin/base
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
