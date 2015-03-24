@@ -1,0 +1,4 @@
+services:
+#    framework_interface.example:
+#        class: Framework\InterfaceBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

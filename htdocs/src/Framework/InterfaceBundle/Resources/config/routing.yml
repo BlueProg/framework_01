@@ -1,0 +1,3 @@
+framework_interface_homepage:
+    path:     /
+    defaults: { _controller: FrameworkInterfaceBundle:Default:index }

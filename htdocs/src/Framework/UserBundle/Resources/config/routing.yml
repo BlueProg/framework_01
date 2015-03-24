@@ -1,0 +1,7 @@
+framework_user_admin_user:
+    resource: "@FrameworkUserBundle/Resources/config/routing/user.yml"
+    prefix:   /admin/user
+
+framework_user_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: FrameworkUserBundle:Default:index }
