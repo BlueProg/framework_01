@@ -1,8 +1,3 @@
-framework_interface:
-    resource: "@FrameworkInterfaceBundle/Resources/config/routing.yml"
-    prefix:   /base
-
-
 framework_user:
     resource: "@FrameworkUserBundle/Resources/config/routing.yml"
     prefix:   /
@@ -12,16 +7,20 @@ fos_user_security:
 
 fos_user_profile:
     resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
-    prefix: /base/profile
+    prefix: /profile
 
 fos_user_register:
     resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-    prefix: /base/register
+    prefix: /register
 
 fos_user_resetting:
     resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-    prefix: /base/resetting
+    prefix: /resetting
 
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-    prefix: /base/profile
+    prefix: /profile
+
+framework_interface:
+   resource: "@FrameworkInterfaceBundle/Resources/config/routing.yml"
+   prefix:   /

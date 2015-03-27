@@ -1,1 +1,31 @@
-Vue de base
+{% extends '::base.html.twig' %}
+
+{% block title %}
+    Page d'accueil
+{% endblock%}
+{% block body %}
+    <div id="header">
+        <h3>Bienvenus sur l'intra</h3>
+    </div>
+    <div id="block_log">
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED')  == false %}
+        <ul><a href={{ path('fos_user_security_login') }}>Se connecter</a></ul>
+
+        <ul><a href={{ path('fos_user_registration_register') }}>Créé un compte</a></ul>
+    {% else %}
+        <ul><a href={{ path('fos_user_security_login') }}>Se deconnecté</a></ul>
+    {% endif %}
+    </div>
+
+    <div id="content_resume">
+            Vous etes sur l'intra en mode: {{ mode_connect }}
+    </div>
+    <div id="link_form">
+            <a href="/formulaire">Lien pour créé un formulaire.</a>
+    </div>
+    {% if is_granted('ROLE_ADMIN') %}
+        <div id="link_admin">
+            <ul><a href= {{ path('admin_user') }}>Acces au CRUD</a></ul>
+        </div>
+    {% endif %}
+{% endblock %}
