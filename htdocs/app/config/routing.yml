@@ -24,3 +24,7 @@ fos_user_change_password:
 framework_interface:
    resource: "@FrameworkInterfaceBundle/Resources/config/routing.yml"
    prefix:   /
+
+framework_interface_formulaire:
+   resource: "@FrameworkInterfaceBundle/Resources/config/routing.yml"
+   prefix:   /

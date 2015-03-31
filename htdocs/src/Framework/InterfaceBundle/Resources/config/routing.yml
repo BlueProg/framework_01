@@ -1,3 +1,7 @@
 framework_interface_homepage:
     path:     /
     defaults: { _controller: FrameworkInterfaceBundle:Default:index }
+
+framework_interface_formulaire:
+    path:     /formulaire
+    defaults: { _controller: FrameworkInterfaceBundle:Formulaire:index }
