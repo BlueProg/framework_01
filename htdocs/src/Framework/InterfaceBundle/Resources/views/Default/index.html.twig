@@ -21,11 +21,16 @@
             Vous etes sur l'intra en mode: {{ mode_connect }}
     </div>
     <div id="link_form">
-            <a href="/formulaire">Lien pour créé un formulaire.</a>
+            <a href={{ path('framework_interface_formulaire') }}>Lien pour créé un formulaire.</a>
     </div>
     {% if is_granted('ROLE_ADMIN') %}
         <div id="link_admin">
             <ul><a href= {{ path('admin_user') }}>Acces au CRUD</a></ul>
         </div>
     {% endif %}
+    {% block javascripts %}
+        {% javascripts '@FrameworkInterfaceBundle/Resources/public/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock %}
 {% endblock %}

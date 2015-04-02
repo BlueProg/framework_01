@@ -22,22 +22,17 @@ class FormulaireController extends Controller
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
             $data = $form->getData();
-            echo "<pre>";
-            var_dump($data);
-            echo "</pre>";
             $message = \Swift_Message::newInstance()
                 ->setSubject($data['title_field'])
-                ->setFrom($data['blueprog42@gmail.com'])
+                ->setFrom($data['email_field'])
                 ->setTo('blueprog42@gmail.com')
                 ->setBody(
-                    $this->renderView(
-                        'FrameworkInterfaceBundle:Formulaire:index.html.twig', array
-                        ('form' => $form->createView())
-                    )
+                    $this->renderView('FrameworkInterfaceBundle:Formulaire:reponse.html.twig', array(
+                        'data' => $data,
+                    ))
                 );
             $this->get('mailer')->send($message);
 
-            //var_dump($data);
             return new RedirectResponse($this->generateUrl('framework_interface_homepage'));;
         }
 
@@ -45,8 +40,4 @@ class FormulaireController extends Controller
             'form' => $form->createView(),
         ));
     }
-//    public function indexAction()
-//    {
-//        return $this->render('FrameworkInterfaceBundle:Formulaire:index.html.twig');
-//    }508875848
 }

@@ -3,10 +3,13 @@
 {% block body -%}
     <h1>User list</h1>
 
+    <a href={{ path('framework_interface_homepage') }}>Revenir à la page d'accueil</a>
     <table class="records_list">
         <thead>
             <tr>
                 <th>Id</th>
+                <th>Username</th>
+                <th>Email</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -14,6 +17,8 @@
         {% for entity in entities %}
             <tr>
                 <td><a href="{{ path('admin_user_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.username }}</td>
+                <td>{{ entity.email }}</td>
                 <td>
                 <ul>
                     <li>
